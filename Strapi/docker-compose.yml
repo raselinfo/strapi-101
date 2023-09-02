@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      # PGPASSWORD : strapibase
+      POSTGRES_DB: test_db
+    ports:
+      - 5432:5432
+      - 4002:5432
+    volumes: 
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - 80:80
+      - 4003:80
+    depends_on:
+      - postgres
+    volumes: 
+      - pgadmindata:/var/lib/pgadmin
+    networks:
+      - postgres-network
+
+
+networks:
+  postgres-network:
+    driver: bridge
+
+volumes: 
+  pgdata:
+  pgadmindata:
