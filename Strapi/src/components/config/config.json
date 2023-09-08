@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_config_configs",
+  "info": {
+    "displayName": "Social_Links",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "social_media": {
+      "type": "enumeration",
+      "enum": [
+        "github",
+        "facebook",
+        "twitter"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_missions",
+  "info": {
+    "displayName": "Mission",
+    "icon": "puzzle"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "show_logo": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

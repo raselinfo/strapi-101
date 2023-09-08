@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_herros",
+  "info": {
+    "displayName": "hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "call_to_action": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "buttons": {
+      "displayName": "Link",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    }
+  }
+}

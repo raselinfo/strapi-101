@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_post_selections",
+  "info": {
+    "displayName": "Post_Selection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "featured_post": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    }
+  }
+}
