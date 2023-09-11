@@ -37,7 +37,7 @@
     "authors": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "plugin::users-permissions.user"
+      "target": "api::author.author"
     },
     "tags": {
       "type": "relation",
@@ -49,6 +49,17 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"
+    },
+    "premium": {
+      "type": "boolean",
+      "required": true,
+      "private": true
+    },
+    "likedBy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "likes"
     }
   }
 }

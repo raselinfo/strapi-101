@@ -8,7 +8,7 @@ const config = {
     // 'es',
     // 'he',
     // 'id',
-    // 'it',
+    'it',
     // 'ja',
     // 'ko',
     // 'ms',
@@ -26,6 +26,7 @@ const config = {
     // 'vi',
     // 'zh-Hans',
     // 'zh',
+    'bd'
   ],
 };
 
